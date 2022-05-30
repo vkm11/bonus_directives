@@ -1,16 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <h2 v-once>{{name}}</h2>
+ <button @click="name= 'Batman'">Change name</button>
+ <h2>{{name}}</h2>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+ data(){ 
+   return{ 
+     name: 'vishwas'
+   }
+ }
 }
 </script>
 
